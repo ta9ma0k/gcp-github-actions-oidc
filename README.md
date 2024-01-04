@@ -1,5 +1,19 @@
 ## gcloudで構築する
 
+### 有効化するAPI
+
+- iam.googleapis.com
+- cloudresourcemanager.googleapis.com
+- iamcredentials.googleapis.com
+- sts.googleapis.com
+
+### 必要なロール
+
+- ID プール管理者（roles/iam.workloadIdentityPoolAdmin）
+- サービスアカウント管理者（roles/iam.serviceAccountAdmin）
+
+### gcloud
+
 ```
 # プールを作成
 gcloud iam workload-identity-pools create "<任意のID>" \
